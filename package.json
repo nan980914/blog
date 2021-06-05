@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "NODE_ENV=development vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "NODE_ENV=production vuepress build docs && cp -r docs/frontend/demo docs/.vuepress/dist/frontend && cp CNAME ./docs/.vuepress/dist",
     "snowpack": "cd docs/snowpack && gitbook serve",
-    "deploy": "git subtree push --prefix docs/.vuepress/dist origin gh-pages"
+    "deploy": "git subtree push --prefix docs/.vuepress/dist origin gh-pages",
+    "build": "npm run docs:build && npm run deploy"
   },
   "keywords": [],
   "author": "hua1995116 <qiufneghyf@gmail.com> (https://github.com/hua1995116)",

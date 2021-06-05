@@ -21,6 +21,12 @@ function extendMetaByPath (page, path) {
   }
 }
 
+const outputConfig = {}
+
+if (process.env.NODE_ENV === 'production') {
+  outputConfig.output = 'https://cdn.jsdelivr.net/gh/nan980914/blog@master/docs/.vuepress/dist/';
+}
+
 module.exports = {
   configureWebpack: {
     resolve: {
@@ -28,9 +34,7 @@ module.exports = {
         '@assets': path.resolve(__dirname, '../assets')
       }
     },
-    output: {
-      publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.jsdelivr.net/gh/nan980914/blog@master/docs/.vuepress/dist/' : './'
-    },
+    ...outputConfig
   },
   base: '/',
   title: '楠溪的生活',
@@ -49,6 +53,7 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'nan980914/blog',
+    sidebarDepth: 2,
     nav: [
       { text: '主页', link: '/' },
       {
@@ -117,15 +122,15 @@ module.exports = {
           extendMetaByPath($page, 'interview');
           extendMetaByPath($page, 'node/websocket');
         //   // extendMetaByPath($page, 'node')
-          if ($page.path.includes('/post')) {
-            const fm = getFrontMatter($page.path)
-            if (fm) {
-              $page.frontmatter = {
-                ...fm,
-                ...$page.frontmatter
-              }
-            }
-          }
+          // if ($page.path.includes('/post')) {
+          //   const fm = getFrontMatter($page.path)
+          //   if (fm) {
+          //     $page.frontmatter = {
+          //       ...fm,
+          //       ...$page.frontmatter
+          //     }
+          //   }
+          // }
           if ($page.frontmatter.keywords) {
             const meta = $page.frontmatter.meta
             $page.frontmatter.meta = meta ? [
