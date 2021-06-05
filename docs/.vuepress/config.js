@@ -29,7 +29,7 @@ module.exports = {
       }
     },
     output: {
-      publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.jsdelivr.net/gh/nan980724/blog@master/docs/.vuepress/dist/' : './'
+      publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.jsdelivr.net/gh/nan980914/blog@master/docs/.vuepress/dist/' : './'
     },
   },
   base: '/',
