@@ -39,7 +39,6 @@
     >
       <template #top>
         <div :style="{ marginTop: '3.6rem', paddingTop: 0, paddingBottom: 0 }" class="theme-default-content">
-          <Bar/>
           <img :src="src" v-if="$page.frontmatter.thumbnail">
         </div>
       </template>
@@ -60,13 +59,12 @@ import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import QR from '@theme/components/QR.vue'
-import Bar from '@theme/components/Bar.vue'
 import Archive from '@theme/components/Archive.vue'
 import Home from '@theme/components/Home.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, QR, Bar, Archive },
+  components: { Home, Page, Sidebar, Navbar, QR, Archive },
 
   data () {
     return {

@@ -24,7 +24,9 @@ function extendMetaByPath (page, path) {
 const outputConfig = {}
 
 if (process.env.NODE_ENV === 'production') {
-  outputConfig.output = 'https://cdn.jsdelivr.net/gh/nan980914/blog@master/docs/.vuepress/dist/';
+  outputConfig.output = {
+    publicPath: 'https://cdn.jsdelivr.net/gh/nan980914/blog@master/docs/.vuepress/dist/'
+  }
 }
 
 module.exports = {
@@ -37,7 +39,7 @@ module.exports = {
     ...outputConfig
   },
   base: '/',
-  title: '楠溪的生活',
+  title: '楠溪',
   description: '',
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
@@ -56,33 +58,34 @@ module.exports = {
     sidebarDepth: 2,
     nav: [
       { text: '主页', link: '/' },
-      {
-        text: '前端系列', items: [
-          {text: 'js文章', link: '/frontend/' },
-          {text: 'react实践', link: '/react/' },
-          {text: 'vue实践', link: '/vue/' },
-          {text: 'debug系列', link: '/debug/' },
-          {text: 'webpack系列', link: '/webpack/' },
-          {text: 'canvas系列', link: '/canvas/' },
-      ]},
-      { text: 'Node 实践', link: '/node/' },
-      { text: '面试', link: '/interview/' },
-      { text: '算法', link: '/algorithm/' },
-      { text: '前端运维', link: '/op/' },
-      { text: '我的开源项目', link: '/open/' },
+      {text: 'js文章', link: '/frontend/' },
+    //   {
+    //     text: '前端系列', items: [
+    //       {text: 'js文章', link: '/frontend/' },
+    //       {text: 'react实践', link: '/react/' },
+    //       {text: 'vue实践', link: '/vue/' },
+    //       {text: 'debug系列', link: '/debug/' },
+    //       {text: 'webpack系列', link: '/webpack/' },
+    //       {text: 'canvas系列', link: '/canvas/' },
+    //   ]},
+    //   { text: 'Node 实践', link: '/node/' },
+    //   { text: '面试', link: '/interview/' },
+    //   { text: '算法', link: '/algorithm/' },
+    //   { text: '前端运维', link: '/op/' },
+    //   { text: '我的开源项目', link: '/open/' },
     ],
     sidebar: {
-      '/algorithm/': algorithm,
-      '/node/': node,
-      '/vue/': vue,
-      '/react/': react,
-      '/open/': open,
+      // '/algorithm/': algorithm,
+      // '/node/': node,
+      // '/vue/': vue,
+      // '/react/': react,
+      // '/open/': open,
       '/frontend/': frontend,
-      '/debug/': debug,
-      '/op/': op,
-      '/webpack/': webpack,
-      '/interview/': interview,
-      '/canvas/': canvas,
+      // '/debug/': debug,
+      // '/op/': op,
+      // '/webpack/': webpack,
+      // '/interview/': interview,
+      // '/canvas/': canvas,
     },
     lastUpdated: 'Last Updated'
   },

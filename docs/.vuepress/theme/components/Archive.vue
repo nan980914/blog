@@ -26,11 +26,10 @@
 
 <script>
 import QR from '@theme/components/QR.vue'
-import Bar from '@theme/components/Bar.vue'
 import dayjs from 'dayjs'
 
 export default {
-  components: { QR, Bar },
+  components: { QR },
   data () {
     return {
       dayjs
