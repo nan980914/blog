@@ -7,8 +7,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "NODE_ENV=production vuepress build docs && cp CNAME ./docs/.vuepress/dist",
     "snowpack": "cd docs/snowpack && gitbook serve",
-    "deploy": "git subtree push --prefix docs/.vuepress/dist origin gh-pages",
-    "build": "npm run docs:build && npm run deploy"
+    "deploy": "git subtree push --prefix docs/.vuepress/dist origin gh-pages"
   },
   "keywords": [],
   "author": "hua1995116 <qiufneghyf@gmail.com> (https://github.com/hua1995116)",

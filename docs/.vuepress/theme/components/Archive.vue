@@ -19,17 +19,14 @@
       <ul class="friend-link">
       </ul>
       <hr>
-      <QR/> 
     </aside>
   </div>
 </template>
 
 <script>
-import QR from '@theme/components/QR.vue'
 import dayjs from 'dayjs'
 
 export default {
-  components: { QR },
   data () {
     return {
       dayjs

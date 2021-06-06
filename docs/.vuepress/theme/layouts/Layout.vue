@@ -21,7 +21,6 @@
     >
       <template #top>
         <div :style="{ paddingLeft: '1.5rem' }">
-          <QR />
         </div>
       </template>
       <slot
@@ -58,13 +57,12 @@
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
-import QR from '@theme/components/QR.vue'
 import Archive from '@theme/components/Archive.vue'
 import Home from '@theme/components/Home.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, QR, Archive },
+  components: { Home, Page, Sidebar, Navbar, Archive },
 
   data () {
     return {
