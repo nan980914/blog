@@ -42,7 +42,7 @@ module.exports = {
   title: '楠溪',
   description: '',
   head: [
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico?t=2', type: 'image/x-icon' }],
     ['script', {}, `
     var _hmt = _hmt || [];
     (function() {
