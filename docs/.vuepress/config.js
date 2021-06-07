@@ -59,7 +59,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: '前端学习', link: '/frontend/' },
-      { text: '减肥', link: '/loseweight/' },
+      { text: '减肥', link: '/loseWeight/' },
     //   {
     //     text: '前端系列', items: [
     //       {text: 'js文章', link: '/frontend/' },
@@ -77,7 +77,7 @@ module.exports = {
     ],
     sidebar: {
       '/frontend/': frontend,
-      '/loseweight/': loseweight
+      '/loseWeight/': loseweight
     },
     lastUpdated: 'Last Updated'
   },
