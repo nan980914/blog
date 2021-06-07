@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const path = require('path')
-const { algorithm, open, react, vue, node, frontend, debug, op, webpack, interview, canvas } = require('./header')
+const {frontend,loseweight} = require('./header')
 
 function getFrontMatter (path, pp = './post') {
   const posts = require(pp)
@@ -58,7 +58,8 @@ module.exports = {
     sidebarDepth: 2,
     nav: [
       { text: '主页', link: '/' },
-      {text: 'js文章', link: '/frontend/' },
+      { text: '前端学习', link: '/frontend/' },
+      { text: '减肥', link: '/loseweight/' },
     //   {
     //     text: '前端系列', items: [
     //       {text: 'js文章', link: '/frontend/' },
@@ -75,17 +76,8 @@ module.exports = {
     //   { text: '我的开源项目', link: '/open/' },
     ],
     sidebar: {
-      // '/algorithm/': algorithm,
-      // '/node/': node,
-      // '/vue/': vue,
-      // '/react/': react,
-      // '/open/': open,
       '/frontend/': frontend,
-      // '/debug/': debug,
-      // '/op/': op,
-      // '/webpack/': webpack,
-      // '/interview/': interview,
-      // '/canvas/': canvas,
+      '/loseweight/': loseweight
     },
     lastUpdated: 'Last Updated'
   },
@@ -102,12 +94,6 @@ module.exports = {
         name: 'archive',
         async additionalPages () {
           return [
-            // {
-            //   path: '/post/',
-            //   frontmatter: {
-            //     archive: true
-            //   }
-            // },
             {
               path: '/',
               frontmatter: {

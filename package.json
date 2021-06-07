@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "nan's blog",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -10,7 +10,7 @@
     "deploy": "git subtree push --prefix docs/.vuepress/dist origin gh-pages"
   },
   "keywords": [],
-  "author": "hua1995116 <qiufneghyf@gmail.com> (https://github.com/hua1995116)",
+  "author": "nan980914 (https://github.com/nan980914)",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.4.0",
