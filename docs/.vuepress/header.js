@@ -1,5 +1,6 @@
 const frontend = require('../frontend/meta.json')
 const loseweight = require('../loseWeight/meta.json')
+const articals = require('../articals/meta.json')
 
 function getHeader (posts) {
   const getPostPair = x => [x.path, x.sideTitle || x.title]
@@ -20,4 +21,5 @@ function getHeader (posts) {
 module.exports = {
   frontend: getHeader(frontend), 
   loseweight: getHeader(loseweight),
+  articals:getHeader(articals),
 }

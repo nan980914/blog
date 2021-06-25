@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const path = require('path')
-const {frontend,loseweight} = require('./header')
+const {frontend,loseweight,articals} = require('./header')
 
 function getFrontMatter (path, pp = './post') {
   const posts = require(pp)
@@ -60,6 +60,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '前端学习', link: '/frontend/' },
       { text: '减肥', link: '/loseWeight/' },
+      { text: '收录', link: '/articals/' },
     //   {
     //     text: '前端系列', items: [
     //       {text: 'js文章', link: '/frontend/' },
@@ -77,7 +78,8 @@ module.exports = {
     ],
     sidebar: {
       '/frontend/': frontend,
-      '/loseWeight/': loseweight
+      '/loseWeight/': loseweight,
+      '/articals/':articals,
     },
     lastUpdated: 'Last Updated'
   },
