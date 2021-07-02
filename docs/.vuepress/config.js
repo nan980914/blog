@@ -105,13 +105,13 @@ module.exports = {
           ]
         },
         extendPageData($page) {
-          extendMetaByPath($page, 'debug');
-          extendMetaByPath($page, 'react');
-          extendMetaByPath($page, 'webpack');
-          extendMetaByPath($page, 'node');
-          extendMetaByPath($page, 'vue');
-          extendMetaByPath($page, 'interview');
-          extendMetaByPath($page, 'node/websocket');
+          // extendMetaByPath($page, 'debug');
+          // extendMetaByPath($page, 'react');
+          // extendMetaByPath($page, 'webpack');
+          // extendMetaByPath($page, 'node');
+          // extendMetaByPath($page, 'vue');
+          // extendMetaByPath($page, 'interview');
+          // extendMetaByPath($page, 'node/websocket');
         //   // extendMetaByPath($page, 'node')
           // if ($page.path.includes('/post')) {
           //   const fm = getFrontMatter($page.path)
