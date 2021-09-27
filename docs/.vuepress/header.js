@@ -1,5 +1,4 @@
 const frontend = require('../frontend/meta.json')
-const loseweight = require('../loseWeight/meta.json')
 const articals = require('../articals/meta.json')
 
 function getHeader (posts) {
@@ -20,6 +19,5 @@ function getHeader (posts) {
 
 module.exports = {
   frontend: getHeader(frontend), 
-  loseweight: getHeader(loseweight),
   articals:getHeader(articals),
 }

@@ -1,29 +1,38 @@
 [
-    {
-        "title": "Vue响应式原理",
-        "date": "2021-07-02 22:53:54",
-        "path": "reactive",
-        "keywords": "Vue 响应式 原理",
-        "description": "Vue响应式原理",
-        "sideTitle": "Vue响应式原理",
-        "category": "Vue基础"
-    },
-    {
-        "title": "Vue3.0 script-setup最新定稿及改动(2021.07)",
-        "date": "2021-07-08 22:00:00",
-        "path": "script-setup",
-        "keywords": "Vue3.0 script-setup 定稿",
-        "description": "Vue3.0 script-setup最新定稿及改动(2021.07)",
-        "sideTitle": "Vue3.0 script-setup最新定稿及改动(2021.07)",
-        "category": "Vue3.0"
-    },
-    {
-        "title": "GSAP基础&使用初体验",
-        "date": "2021-07-08 22:00:00",
-        "path": "gsap",
-        "keywords": "Vue3.0 gsap 基础",
-        "description": "GSAP基础&使用初体验",
-        "sideTitle": "GSAP基础&使用初体验",
-        "category": "GSAP"
-    }
+  {
+    "title": "前端模块化",
+    "date": "2021-09-10 22:00:00",
+    "path": "module",
+    "keywords": "前端模块化",
+    "description": "前端模块化",
+    "sideTitle": "前端模块化",
+    "category": "前端模块化"
+  },
+  {
+    "title": "Vue响应式原理",
+    "date": "2021-07-02 22:53:54",
+    "path": "reactive",
+    "keywords": "Vue 响应式 原理",
+    "description": "Vue响应式原理",
+    "sideTitle": "Vue响应式原理",
+    "category": "Vue基础"
+  },
+  {
+    "title": "Vue3.0 script-setup最新定稿及改动(2021.07)",
+    "date": "2021-07-08 22:00:00",
+    "path": "script-setup",
+    "keywords": "Vue3.0 script-setup 定稿",
+    "description": "Vue3.0 script-setup最新定稿及改动(2021.07)",
+    "sideTitle": "Vue3.0 script-setup最新定稿及改动(2021.07)",
+    "category": "Vue3.0"
+  },
+  {
+    "title": "GSAP基础及使用",
+    "date": "2021-07-08 22:00:00",
+    "path": "gsap",
+    "keywords": "Vue3.0 gsap 基础",
+    "description": "GSAP基础及使用",
+    "sideTitle": "GSAP基础及使用",
+    "category": "GSAP"
+  }
 ]
