@@ -1,5 +1,7 @@
 # 前端学习
 
+## 前端模块化
+[前端模块化](./module.md)
 ## Vue原理
 [Vue响应式原理](./reactive.md)
 ## Vue3.0
@@ -7,6 +9,4 @@
 
 ## GSAP
 [GSAP基础及使用](./gsap.md)
-## 前端模块化
-[前端模块化](./module.md)
 
