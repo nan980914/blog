@@ -18,6 +18,14 @@
     "category": "Vue原理"
   },
   {
+    "title": "Vue2和Vue3的虚拟DOM和核心diff详细实现",
+    "date": "2021-08-07 12:44:26",
+    "path": "diff",
+    "keywords": "Vue2和Vue3的虚拟DOM和核心diff详细实现 原理",
+    "description": "Vue2和Vue3的虚拟DOM和核心diff详细实现",
+    "sideTitle": "Vue2和Vue3的虚拟DOM和核心diff详细实现"
+  },
+  {
     "title": "Vue3.0 script-setup最新定稿及改动(2021.07)",
     "date": "2021-07-08 22:00:00",
     "path": "script-setup",
