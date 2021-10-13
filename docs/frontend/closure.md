@@ -102,7 +102,7 @@ JS中有两个方法来实现这个目的，能在运行过程中改变作用域
 
 我们看下面一段代码，就清晰的展示了闭包：
 
-```json
+```javascript
 function foo() {
   var a = 2;
   function bar() {
