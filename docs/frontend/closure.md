@@ -141,6 +141,136 @@ wait( "Hello world!" );
 
 在**定时器、事件监听器(addEventListener)、Ajax请求、跨窗口通信、Web Worker等任务**中，只要使用了回调函数，都是在使用闭包。
 
+## 在实际开发中对闭包的应用
+
+### 1. 模拟私有变量的实现
+
+闭包常用来创建内部变量，使这些内部变量不能被外部访问到，但可以通过指定的函数接口来对其进行操作。把变量的变化封装在安全的环境里。
+
+```javascript
+class Client {
+	constructor(money) {
+    this.assets = money
+  }
+  earn() {
+   	this.assets++
+    console.log(this.assets)
+  }
+}
+let xiaoming = new Client(500)
+console.log(xiaoming.assets) // 500,外部可以拿到
+```
+
+用闭包封装一层：
+
+```javascript
+let createClinet = (function() {
+  let assets
+  class Client {
+    constructor(money) {
+      assets = money
+    }
+		earn() {
+      assets++
+      console.log(assets)
+    }
+  }
+  return Client
+})()
+let xiaoming = new createClinet(300)
+console.log(xiaoming.assets) // undefined,外部拿不到
+```
+
+### 2. 利用闭包来设计单例模式
+
+下面这个例子中，就利用了闭包。使全局只有一个CreateCat的实例，所以最后 miao 和 mi 其实指向的是同一个实例。
+
+```javascript
+class CreateCat {
+	constructor(name){
+    this.name = name
+  }
+}
+let singleMode = (funciton() {
+   let instance = null
+   return function(name) {
+  		if(!instance) {
+        instance = new CreateCat(name)
+      }
+  		return instance
+	}
+})()
+
+let miao = singleMode('miao')
+let mi = singleMode('mi')
+console.log(miao === mi) // true
+```
+
+### 3. 便函数与柯里化
+
+「"便函数和柯里化都是能帮助我们把需要传入多个参数的函数，转化为需要更少入参的函数的方法"」
+
+#### 柯里化
+
+>在计算机科学中，柯里化（英语：Currying），是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
+
+柯里化是把**接受 n 个参数的 1 个函数**改造为**只接受 1个参数的 n 个互相嵌套的函数**的过程。也就是 fn (a, b, c)会变成 fn (a)(b)(c)。
+
+其实这个就是利用了闭包，在函数里返回函数，并让它记住上次的状态。
+
+比如下面的例子，我们可以传入性别和姓氏和名字三个参数来返回对应的信息。每次也必须传入三个参数。
+
+```javascript
+function name(sex,xing,ming) {
+	return sex + '-' + xing + ming
+}
+```
+
+但想一下，如果在录入都是性别女的、都是性别女下姓氏为王的，那还得不断传入”女“，”王“的参数。如果我们改造一下呢？
+
+```javascript
+function generateName(sex) {
+  return function(xing) {
+    return function(ming) {
+      return sex + '-' + xing + ming
+    }
+  }
+}
+// 生成性别为女的专有函数
+let femaleName = generateName('女')
+
+// 生成性别为女、姓氏为王的专有函数
+let femaleWangName = femaleName('王')
+
+// 调用
+femaleWangName('花花') // 输出 '女-王花花'
+```
+
+看这个例子，我们就利用了闭包，生成了复用程度更高的目标函数。
+
+#### 偏函数
+
+便函数与柯里化基本一致，只不过入参的数量比较随意：
+
+```javascript
+function generateName(sex) {
+  return function(xing,ming) {
+      return sex + '-' + xing + ming
+  }
+}
+// 生成性别为女的专有函数
+let femaleName = generateName('女')
+
+// 调用
+femaleName('王','花花') // 输出 '女-王花花'
+```
+
+### 4. 回调函数
+
+正如上一节「理解闭包」里的最后总结。
+
+在**定时器、事件监听器(addEventListener)、Ajax请求、跨窗口通信、Web Worker等任务**中，只要使用了回调函数，都是在使用闭包。
+
 ## 总结
 
 当函数可以记住并访问所在的词法作用域，即使函数是在当前词法作用域之外执行，这时 就产生了闭包。
